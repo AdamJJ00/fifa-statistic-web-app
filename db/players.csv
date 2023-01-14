@@ -1,0 +1,339 @@
+,Name,Date_of_birth,Height_cm,Position,Market_value,Better_foot,Team
+0,Wojciech Szczesny,"Apr 18, 1990 (32)","1,96m",Goalkeeper,€15.00m,right,Poland
+1,Bartlomiej Dragowski,"Aug 19, 1997 (24)","1,91m",Goalkeeper,€6.00m,right,Poland
+2,Lukasz Skorupski,"May 5, 1991 (31)","1,87m",Goalkeeper,€4.00m,right,Poland
+3,Kamil Grabara,"Jan 8, 1999 (23)","1,95m",Goalkeeper,€4.00m,right,Poland
+4,Jan Bednarek,"Apr 12, 1996 (26)","1,89m",Centre-Back,€22.00m,right,Poland
+5,Michal Helik,"Sep 9, 1995 (26)","1,91m",Centre-Back,€3.00m,right,Poland
+6,Jakub Kiwior,"Feb 15, 2000 (22)","1,89m",Centre-Back,€3.00m,left,Poland
+7,Bartosz Salamon,"May 1, 1991 (31)","1,94m",Centre-Back,€1.50m,right,Poland
+8,Mateusz Wieteska,"Feb 11, 1997 (25)","1,87m",Centre-Back,€1.30m,right,Poland
+9,Marcin Kaminski,"Jan 15, 1992 (30)","1,92m",Centre-Back,€1.00m,left,Poland
+10,Kamil Glik,"Feb 3, 1988 (34)","1,90m",Centre-Back,€1.00m,right,Poland
+11,Artur Jedrzejczyk,"Nov 4, 1987 (34)","1,89m",Centre-Back,€200k,right,Poland
+12,Arkadiusz Reca,"Jun 17, 1995 (27)","1,87m",Left-Back,€3.00m,left,Poland
+13,Tymoteusz Puchacz,"Jan 23, 1999 (23)","1,80m",Left-Back,€2.30m,left,Poland
+14,Matty Cash,"Aug 7, 1997 (24)","1,85m",Right-Back,€25.00m,right,Poland
+15,Tomasz Kedziora,"Jun 11, 1994 (28)","1,84m",Right-Back,€4.50m,right,Poland
+16,Bartosz Bereszynski,"Jul 12, 1992 (29)","1,83m",Right-Back,€4.00m,right,Poland
+17,Robert Gumny,"Jun 4, 1998 (24)","1,82m",Right-Back,€2.50m,right,Poland
+18,Grzegorz Krychowiak,"Jan 29, 1990 (32)","1,87m",Defensive Midfield,€8.00m,right,Poland
+19,Krystian Bielik,"Jan 4, 1998 (24)","1,89m",Defensive Midfield,€4.00m,right,Poland
+20,Jacek Goralski,"Sep 21, 1992 (29)","1,72m",Defensive Midfield,€1.60m,right,Poland
+21,Jakub Moder,"Apr 7, 1999 (23)","1,91m",Central Midfield,€12.00m,right,Poland
+22,Szymon Zurkowski,"Sep 25, 1997 (24)","1,85m",Central Midfield,€7.00m,right,Poland
+23,Karol Linetty,"Feb 2, 1995 (27)","1,76m",Central Midfield,€3.50m,right,Poland
+24,Mateusz Klich,"Jun 13, 1990 (32)","1,83m",Central Midfield,€3.00m,right,Poland
+25,Damian Szymanski,"Jun 16, 1995 (27)","1,85m",Central Midfield,€1.80m,right,Poland
+26,Przemyslaw Frankowski,"Apr 12, 1995 (27)","1,75m",Right Midfield,€8.00m,right,Poland
+27,Nicola Zalewski,"Jan 23, 2002 (20)","1,75m",Left Midfield,€12.00m,both,Poland
+28,Patryk Kun,"Apr 20, 1995 (27)","1,65m",Left Midfield,€1.20m,both,Poland
+29,Kamil Pestka,"Aug 22, 1998 (23)","1,89m",Left Midfield,€900k,left,Poland
+30,Piotr Zielinski,"May 20, 1994 (28)","1,80m",Attacking Midfield,€40.00m,both,Poland
+31,Sebastian Szymanski,"May 10, 1999 (23)","1,74m",Attacking Midfield,€14.00m,left,Poland
+32,Jakub Kaminski,"Jun 5, 2002 (20)","1,79m",Left Winger,€10.00m,right,Poland
+33,Kamil Józwiak,"Apr 22, 1998 (24)","1,76m",Left Winger,€2.50m,right,Poland
+34,Przemyslaw Placheta,"Mar 23, 1998 (24)","1,78m",Left Winger,€1.80m,left,Poland
+35,Kamil Grosicki,"Jun 8, 1988 (34)","1,80m",Left Winger,€800k,right,Poland
+36,Konrad Michalak,"Sep 19, 1997 (24)","1,76m",Right Winger,€1.70m,right,Poland
+37,Michal Skoras,"Feb 15, 2000 (22)","1,72m",Right Winger,€1.20m,right,Poland
+38,Robert Lewandowski,"Aug 21, 1988 (33)","1,85m",Centre-Forward,€45.00m,right,Poland
+39,Arkadiusz Milik,"Feb 28, 1994 (28)","1,86m",Centre-Forward,€16.00m,left,Poland
+40,Krzysztof Piatek,"Jul 1, 1995 (26)","1,83m",Centre-Forward,€12.00m,right,Poland
+41,Adam Buksa,"Jul 12, 1996 (25)","1,93m",Centre-Forward,€9.00m,left,Poland
+42,Karol Swiderski,"Jan 23, 1997 (25)","1,84m",Centre-Forward,€5.00m,left,Poland
+43,Emiliano Martínez,"Sep 2, 1992 (29)","1,95m",Goalkeeper,€28.00m,right,Argentina
+44,Juan Musso,"May 6, 1994 (28)","1,91m",Goalkeeper,€18.00m,right,Argentina
+45,Gerónimo Rulli,"May 20, 1992 (30)","1,89m",Goalkeeper,€6.00m,right,Argentina
+46,Franco Armani,"Oct 16, 1986 (35)","1,89m",Goalkeeper,€3.50m,right,Argentina
+47,Cristian Romero,"Apr 27, 1998 (24)","1,85m",Centre-Back,€48.00m,right,Argentina
+48,Lisandro Martínez,"Jan 18, 1998 (24)","1,75m",Centre-Back,€32.00m,left,Argentina
+49,Marcos Senesi,"May 10, 1997 (25)","1,85m",Centre-Back,€17.00m,left,Argentina
+50,Lucas Martínez Quarta,"May 10, 1996 (26)","1,83m",Centre-Back,€12.00m,right,Argentina
+51,Germán Pezzella,"Jun 27, 1991 (31)","1,87m",Centre-Back,€5.00m,right,Argentina
+52,Nicolás Otamendi,"Feb 12, 1988 (34)","1,83m",Centre-Back,€3.50m,right,Argentina
+53,Marcos Acuna,"Oct 28, 1991 (30)","1,72m",Left-Back,€18.00m,left,Argentina
+54,Nicolás Tagliafico,"Aug 31, 1992 (29)","1,72m",Left-Back,€11.00m,left,Argentina
+55,Juan Foyth,"Jan 12, 1998 (24)","1,87m",Right-Back,€25.00m,right,Argentina
+56,Nahuel Molina,"Apr 6, 1998 (24)","1,75m",Right-Back,€20.00m,right,Argentina
+57,Gonzalo Montiel,"Jan 1, 1997 (25)","1,75m",Right-Back,€14.00m,right,Argentina
+58,Guido Rodríguez,"Apr 12, 1994 (28)","1,85m",Defensive Midfield,€25.00m,right,Argentina
+59,Leandro Paredes,"Jun 29, 1994 (28)","1,80m",Defensive Midfield,€17.00m,right,Argentina
+60,Rodrigo de Paul,"May 24, 1994 (28)","1,80m",Central Midfield,€40.00m,right,Argentina
+61,Giovani Lo Celso,"Apr 9, 1996 (26)","1,77m",Central Midfield,€22.00m,left,Argentina
+62,Alexis Mac Allister,"Dec 24, 1998 (23)","1,74m",Central Midfield,€16.00m,right,Argentina
+63,Exequiel Palacios,"Oct 5, 1998 (23)","1,77m",Central Midfield,€15.00m,right,Argentina
+64,Enzo Fernandez,"Jan 17, 2001 (21)","1,78m",Central Midfield,€15.00m,right,Argentina
+65,Thiago Almada,"Apr 26, 2001 (21)","1,71m",Attacking Midfield,€18.00m,right,Argentina
+66,Nicolás González,"Apr 6, 1998 (24)","1,80m",Left Winger,€25.00m,left,Argentina
+67,Papu Gómez,"Feb 15, 1988 (34)","1,67m",Left Winger,€6.00m,right,Argentina
+68,Lionel Messi,"Jun 24, 1987 (35)","1,70m",Right Winger,€50.00m,left,Argentina
+69,Ángel Correa,"Mar 9, 1995 (27)","1,71m",Right Winger,€45.00m,right,Argentina
+70,Ángel Di María,"Feb 14, 1988 (34)","1,80m",Right Winger,€12.00m,left,Argentina
+71,Paulo Dybala,"Nov 15, 1993 (28)","1,77m",Second Striker,€35.00m,left,Argentina
+72,Joaquín Correa,"Aug 13, 1994 (27)","1,88m",Second Striker,€23.00m,right,Argentina
+73,Lautaro Martínez,"Aug 22, 1997 (24)","1,74m",Centre-Forward,€75.00m,right,Argentina
+74,Julian Alvarez,"Jan 31, 2000 (22)","1,70m",Centre-Forward,€23.00m,right,Argentina
+75,Carlos Acevedo,"Apr 19, 1996 (26)","1,85m",Goalkeeper,€5.00m,right,Mexico
+76,Luis Malagón,"Mar 2, 1997 (25)","1,82m",Goalkeeper,€3.00m,right,Mexico
+77,Rodolfo Cota,"Jul 3, 1987 (34)","1,83m",Goalkeeper,€1.50m,right,Mexico
+78,Guillermo Ochoa,"Jul 13, 1985 (36)","1,83m",Goalkeeper,€1.50m,right,Mexico
+79,Jonathan Orozco,"May 12, 1986 (36)","1,84m",Goalkeeper,€1.00m,right,Mexico
+80,Sebastián Jurado,"Sep 28, 1997 (24)","1,88m",Goalkeeper,€1.00m,right,Mexico
+81,David Ochoa,"Jan 16, 2001 (21)","1,88m",Goalkeeper,€800k,,Mexico
+82,Alfredo Talavera,"Sep 18, 1982 (39)","1,88m",Goalkeeper,€800k,right,Mexico
+83,César Montes,"Feb 24, 1997 (25)","1,95m",Centre-Back,€7.00m,right,Mexico
+84,Carlos Salcedo,"Sep 29, 1993 (28)","1,88m",Centre-Back,€5.00m,right,Mexico
+85,Néstor Araújo,"Aug 29, 1991 (30)","1,88m",Centre-Back,€4.00m,right,Mexico
+86,Johan Vásquez,"Oct 22, 1998 (23)","1,84m",Centre-Back,€4.00m,left,Mexico
+87,Israel Reyes,"May 23, 2000 (22)","1,79m",Centre-Back,€3.50m,right,Mexico
+88,Haret Ortega,"May 19, 2000 (22)","1,90m",Centre-Back,€3.00m,right,Mexico
+89,Luis Olivas,"Feb 10, 2000 (22)","1,85m",Centre-Back,€2.50m,left,Mexico
+90,Gilberto Sepúlveda,"Feb 4, 1999 (23)","1,82m",Centre-Back,€2.30m,right,Mexico
+91,Víctor Guzmán,"Mar 7, 2002 (20)","1,83m",Centre-Back,€2.00m,right,Mexico
+92,Arturo Ortiz,"Aug 25, 1992 (29)","1,81m",Centre-Back,€1.80m,right,Mexico
+93,Héctor Moreno,"Jan 17, 1988 (34)","1,84m",Centre-Back,€1.50m,left,Mexico
+94,Julio Domínguez,"Nov 8, 1987 (34)","1,77m",Centre-Back,€1.40m,right,Mexico
+95,Jesús Angulo,"Jan 30, 1998 (24)","1,78m",Left-Back,€6.00m,left,Mexico
+96,Érick Aguirre,"Feb 23, 1997 (25)","1,71m",Left-Back,€5.00m,right,Mexico
+97,Gerardo Arteaga,"Sep 7, 1998 (23)","1,75m",Left-Back,€4.00m,left,Mexico
+98,Osvaldo Rodríguez,"Sep 10, 1996 (25)","1,75m",Left-Back,€3.50m,left,Mexico
+99,Jesús Gallardo,"Aug 15, 1994 (27)","1,74m",Left-Back,€3.00m,left,Mexico
+100,Jonathan Gómez,"Sep 1, 2003 (18)","1,78m",Left-Back,€500k,left,Mexico
+101,Jorge Sánchez,"Dec 10, 1997 (24)","1,75m",Right-Back,€5.00m,right,Mexico
+102,Kevin Álvarez,"Jan 15, 1999 (23)","1,76m",Right-Back,€5.00m,right,Mexico
+103,Julián Araujo,"Aug 13, 2001 (20)","1,75m",Right-Back,€4.50m,right,Mexico
+104,David Ramírez,"Dec 14, 1995 (26)","1,68m",Right-Back,€2.50m,right,Mexico
+105,Vladimir Loroña,"Nov 16, 1998 (23)","1,83m",Right-Back,€2.50m,right,Mexico
+106,Luis Rodríguez,"Jan 21, 1991 (31)","1,75m",Right-Back,€2.00m,right,Mexico
+107,Edson Álvarez,"Oct 24, 1997 (24)","1,87m",Defensive Midfield,€22.00m,right,Mexico
+108,Luis Romo,"Jun 5, 1995 (27)","1,83m",Defensive Midfield,€7.00m,right,Mexico
+109,Luis Chávez,"Jan 15, 1996 (26)","1,78m",Defensive Midfield,€5.00m,left,Mexico
+110,Alan Cervantes,"Jan 17, 1998 (24)","1,81m",Defensive Midfield,€4.00m,right,Mexico
+111,Erik Lira,"May 8, 2000 (22)","1,72m",Defensive Midfield,€4.00m,right,Mexico
+112,José Esquivel,"Jan 7, 1998 (24)","1,79m",Defensive Midfield,€2.50m,right,Mexico
+113,Carlos Rodríguez,"Jan 3, 1997 (25)","1,71m",Central Midfield,€10.00m,right,Mexico
+114,Érick Sánchez,"Sep 27, 1999 (22)","1,67m",Central Midfield,€7.00m,right,Mexico
+115,Érick Gutiérrez,"Jun 15, 1995 (27)","1,76m",Central Midfield,€7.00m,left,Mexico
+116,Héctor Herrera,"Apr 19, 1990 (32)","1,80m",Central Midfield,€5.00m,right,Mexico
+117,Fernando Beltrán,"May 8, 1998 (24)","1,68m",Central Midfield,€4.50m,right,Mexico
+118,Orbelín Pineda,"Mar 24, 1996 (26)","1,69m",Central Midfield,€4.00m,right,Mexico
+119,Andrés Guardado,"Sep 28, 1986 (35)","1,67m",Central Midfield,€1.50m,left,Mexico
+120,Jonathan dos Santos,"Apr 26, 1990 (32)","1,72m",Central Midfield,€1.00m,right,Mexico
+121,Efraín Álvarez,"Jun 19, 2002 (20)","1,73m",Attacking Midfield,€6.00m,left,Mexico
+122,Sebastián Córdova,"Jun 12, 1997 (25)","1,74m",Attacking Midfield,€5.00m,,Mexico
+123,Rodolfo Pizarro,"Feb 15, 1994 (28)","1,75m",Attacking Midfield,€4.00m,right,Mexico
+124,Jesús Angulo,"Feb 20, 1997 (25)","1,72m",Attacking Midfield,€3.00m,left,Mexico
+125,Marcelo Flores,"Oct 1, 2003 (18)","1,64m",Attacking Midfield,€1.50m,right,Mexico
+126,Karel Campos,"Jan 17, 2003 (19)","1,72m",Attacking Midfield,-,right,Mexico
+127,Alexis Vega,"Nov 25, 1997 (24)","1,73m",Left Winger,€7.50m,right,Mexico
+128,Jordán Carrillo,"Nov 30, 2001 (20)","1,68m",Left Winger,€700k,right,Mexico
+129,Hirving Lozano,"Jul 30, 1995 (26)","1,75m",Right Winger,€30.00m,right,Mexico
+130,Tecatito,"Jan 6, 1993 (29)","1,73m",Right Winger,€18.00m,both,Mexico
+131,Roberto Alvarado,"Sep 7, 1998 (23)","1,76m",Right Winger,€5.50m,left,Mexico
+132,Uriel Antuna,"Aug 21, 1997 (24)","1,74m",Right Winger,€5.00m,right,Mexico
+133,Alejandro Zendejas,"Feb 7, 1998 (24)","1,65m",Right Winger,€3.00m,left,Mexico
+134,Diego Lainez,"Jun 9, 2000 (22)","1,68m",Right Winger,€2.50m,left,Mexico
+135,Raúl Jiménez,"May 5, 1991 (31)","1,88m",Centre-Forward,€18.00m,right,Mexico
+136,Alan Pulido,"Mar 8, 1991 (31)","1,77m",Centre-Forward,€8.00m,right,Mexico
+137,Rogelio Funes Mori,"Mar 5, 1991 (31)","1,86m",Centre-Forward,€4.50m,right,Mexico
+138,Santiago Giménez,"Apr 18, 2001 (21)","1,83m",Centre-Forward,€4.00m,left,Mexico
+139,Henry Martín,"Nov 18, 1992 (29)","1,80m",Centre-Forward,€3.50m,right,Mexico
+140,Eduardo Aguirre,"Aug 3, 1998 (23)","1,76m",Centre-Forward,€2.00m,right,Mexico
+141,Mohammed Al-Rubaie,"Aug 14, 1997 (24)","1,90m",Goalkeeper,€1.20m,right,Saudi-arabia
+142,Mohammed Al-Owais,"Oct 10, 1991 (30)","1,85m",Goalkeeper,€900k,left,Saudi-arabia
+143,Fawaz Al-Qarni,"Apr 2, 1992 (30)","1,85m",Goalkeeper,€350k,right,Saudi-arabia
+144,Amin Al-Bukhari,"May 2, 1997 (25)","1,94m",Goalkeeper,€175k,right,Saudi-arabia
+145,Nawaf Al-Aqidi,"May 10, 2000 (22)","1,86m",Goalkeeper,€50k,,Saudi-arabia
+146,Ziyad Al-Sahafi,"Oct 17, 1994 (27)","1,82m",Centre-Back,€1.50m,right,Saudi-arabia
+147,Abdulelah Al-Amri,"Jan 15, 1997 (25)","1,83m",Centre-Back,€1.00m,right,Saudi-arabia
+148,Abdullah Madu,"Jul 15, 1993 (28)","1,86m",Centre-Back,€900k,left,Saudi-arabia
+149,Ali Al-Oujami,"Apr 25, 1996 (26)","1,75m",Centre-Back,€750k,right,Saudi-arabia
+150,Hassan Tambakti,"Feb 9, 1999 (23)","1,82m",Centre-Back,€600k,right,Saudi-arabia
+151,Ali Al-Boleahi,"Nov 21, 1989 (32)","1,78m",Centre-Back,€400k,left,Saudi-arabia
+152,Yasser Al-Shahrani,"May 25, 1992 (30)","1,70m",Left-Back,€2.00m,right,Saudi-arabia
+153,Nasser Al-Dawsari,"Dec 19, 1998 (23)","1,78m",Left-Back,€350k,left,Saudi-arabia
+154,Sultan Al-Ghannam,"May 6, 1994 (28)","1,73m",Right-Back,€3.50m,right,Saudi-arabia
+155,Mohammed Al-Burayk,"Sep 15, 1992 (29)","1,70m",Right-Back,€2.00m,right,Saudi-arabia
+156,Saud Abdulhamid,"Jul 18, 1999 (22)","1,78m",Right-Back,€1.20m,right,Saudi-arabia
+157,Ali Al-Hassan,"Mar 4, 1997 (25)","1,76m",Defensive Midfield,€300k,right,Saudi-arabia
+158,Abdullah Otayf,"Aug 3, 1992 (29)","1,77m",Defensive Midfield,€300k,right,Saudi-arabia
+159,Riad Sharahili,"Apr 28, 1993 (29)","1,85m",Defensive Midfield,€25k,right,Saudi-arabia
+160,Mohamed Kanno,"Sep 22, 1994 (27)","1,92m",Central Midfield,€1.80m,right,Saudi-arabia
+161,Abdulelah Al-Malki,"Oct 11, 1994 (27)","1,70m",Central Midfield,€1.50m,right,Saudi-arabia
+162,Salman Al-Faraj,"Aug 1, 1989 (32)","1,80m",Central Midfield,€750k,left,Saudi-arabia
+163,Sami Al-Najei,"Feb 7, 1997 (25)","1,81m",Attacking Midfield,€900k,left,Saudi-arabia
+164,Nawaf Al-Abed,"Jan 26, 1990 (32)","1,70m",Attacking Midfield,€350k,left,Saudi-arabia
+165,Abdulrahman Ghareeb,"Mar 31, 1997 (25)","1,64m",Left Winger,€3.00m,right,Saudi-arabia
+166,Salem Al-Dawsari,"Aug 19, 1991 (30)","1,71m",Left Winger,€2.80m,right,Saudi-arabia
+167,Khalid Al-Ghannam,"Nov 8, 2000 (21)","1,71m",Left Winger,€1.00m,right,Saudi-arabia
+168,Abdulaziz Al-Bishi,"Mar 11, 1994 (28)","1,72m",Right Winger,€2.50m,right,Saudi-arabia
+169,Abdulrahman Al-Oboud,"Jun 10, 1995 (27)","1,74m",Right Winger,€1.50m,right,Saudi-arabia
+170,Hattan Bahebri,"Jul 16, 1992 (29)","1,70m",Right Winger,€900k,right,Saudi-arabia
+171,Firas Al-Buraikan,"May 14, 2000 (22)","1,81m",Centre-Forward,€1.20m,left,Saudi-arabia
+172,Saleh Al-Shehri,"Nov 1, 1993 (28)","1,84m",Centre-Forward,€1.00m,right,Saudi-arabia
+173,Haitham Asiri,"Mar 25, 2001 (21)","1,73m",Centre-Forward,€600k,right,Saudi-arabia
+174,Abdullah Al-Hamdan,"Sep 12, 1999 (22)","1,84m",Centre-Forward,€375k,both,Saudi-arabia
+175,Keisuke Osako,"Jul 28, 1999 (22)","1,87m",Goalkeeper,€850k,right,Japan
+176,Kosei Tani,"Nov 22, 2000 (21)","1,90m",Goalkeeper,€800k,right,Japan
+177,Daniel Schmidt,"Feb 3, 1992 (30)","1,97m",Goalkeeper,€800k,right,Japan
+178,Shuichi Gonda,"Mar 3, 1989 (33)","1,87m",Goalkeeper,€500k,right,Japan
+179,Zion Suzuki,"Aug 21, 2002 (19)","1,90m",Goalkeeper,€300k,right,Japan
+180,Eiji Kawashima,"Mar 20, 1983 (39)","1,85m",Goalkeeper,€200k,right,Japan
+181,Ko Itakura,"Jan 27, 1997 (25)","1,88m",Centre-Back,€5.00m,right,Japan
+182,Hiroki Ito,"May 12, 1999 (23)","1,88m",Centre-Back,€4.50m,left,Japan
+183,Shogo Taniguchi,"Jul 15, 1991 (30)","1,83m",Centre-Back,€1.70m,right,Japan
+184,Maya Yoshida,"Aug 24, 1988 (33)","1,89m",Centre-Back,€1.50m,right,Japan
+185,Shinnosuke Nakatani,"Mar 24, 1996 (26)","1,84m",Centre-Back,€1.30m,right,Japan
+186,Shinnosuke Hatanaka,"Aug 25, 1995 (26)","1,84m",Centre-Back,€1.00m,both,Japan
+187,Sho Sasaki,"Oct 2, 1989 (32)","1,77m",Centre-Back,€900k,right,Japan
+188,Hayato Araki,"Aug 7, 1996 (25)","1,86m",Centre-Back,€900k,right,Japan
+189,Takuma Ominami,"Dec 13, 1997 (24)","1,84m",Centre-Back,€800k,right,Japan
+190,Yuta Nakayama,"Feb 16, 1997 (25)","1,81m",Centre-Back,€600k,left,Japan
+191,Daiki Sugioka,"Sep 8, 1998 (23)","1,82m",Left-Back,€550k,left,Japan
+192,Yuto Nagatomo,"Sep 12, 1986 (35)","1,70m",Left-Back,€400k,both,Japan
+193,Takehiro Tomiyasu,"Nov 5, 1998 (23)","1,88m",Right-Back,€25.00m,right,Japan
+194,Hiroki Sakai,"Apr 12, 1990 (32)","1,85m",Right-Back,€2.50m,right,Japan
+195,Miki Yamane,"Dec 22, 1993 (28)","1,78m",Right-Back,€1.30m,right,Japan
+196,Ryuta Koike,"Aug 29, 1995 (26)","1,70m",Right-Back,€900k,right,Japan
+197,Wataru Endo,"Feb 9, 1993 (29)","1,78m",Defensive Midfield,€8.00m,right,Japan
+198,Hidemasa Morita,"May 10, 1995 (27)","1,77m",Defensive Midfield,€4.00m,right,Japan
+199,Kento Hashimoto,"Aug 16, 1993 (28)","1,83m",Defensive Midfield,€2.20m,right,Japan
+200,Tomoki Iwata,"Apr 7, 1997 (25)","1,76m",Defensive Midfield,€1.00m,right,Japan
+201,Gakuto Notsuda,"Jun 6, 1994 (28)","1,77m",Defensive Midfield,€700k,left,Japan
+202,Joel Chima Fujita,"Feb 16, 2002 (20)","1,73m",Defensive Midfield,€700k,right,Japan
+203,Reo Hatate,"Nov 21, 1997 (24)","1,72m",Central Midfield,€2.50m,right,Japan
+204,Ao Tanaka,"Sep 10, 1998 (23)","1,80m",Central Midfield,€1.50m,right,Japan
+205,Gaku Shibasaki,"May 28, 1992 (30)","1,74m",Central Midfield,€1.00m,right,Japan
+206,Kota Mizunuma,"Feb 22, 1990 (32)","1,76m",Right Midfield,€850k,right,Japan
+207,Daichi Kamada,"Aug 5, 1996 (25)","1,84m",Attacking Midfield,€22.00m,right,Japan
+208,Genki Haraguchi,"May 9, 1991 (31)","1,78m",Attacking Midfield,€2.50m,right,Japan
+209,Tsukasa Morishima,"Apr 25, 1997 (25)","1,73m",Attacking Midfield,€1.30m,right,Japan
+210,Yasuto Wakizaka,"Jun 11, 1995 (27)","1,72m",Attacking Midfield,€1.00m,right,Japan
+211,Takumi Minamino,"Jan 16, 1995 (27)","1,72m",Left Winger,€12.00m,right,Japan
+212,Daizen Maeda,"Oct 20, 1997 (24)","1,73m",Left Winger,€3.50m,right,Japan
+213,Kaoru Mitoma,"May 20, 1997 (25)","1,78m",Left Winger,€2.50m,right,Japan
+214,Yuki Soma,"Feb 25, 1997 (25)","1,66m",Left Winger,€900k,right,Japan
+215,Yuto Iwasaki,"Jun 11, 1998 (24)","1,73m",Left Winger,€500k,right,Japan
+216,Ritsu Doan,"Jun 16, 1998 (24)","1,72m",Right Winger,€8.00m,left,Japan
+217,Takefusa Kubo,"Jun 4, 2001 (21)","1,73m",Right Winger,€7.50m,left,Japan
+218,Junya Ito,"Mar 9, 1993 (29)","1,76m",Right Winger,€7.50m,right,Japan
+219,Takuma Asano,"Nov 10, 1994 (27)","1,73m",Right Winger,€3.00m,right,Japan
+220,Makoto Mitsuta,"Jul 20, 1999 (22)","1,70m",Right Winger,€450k,right,Japan
+221,Ryo Miyaichi,"Dec 14, 1992 (29)","1,83m",Right Winger,€400k,right,Japan
+222,Takuma Nishimura,"Oct 22, 1996 (25)","1,78m",Second Striker,€800k,right,Japan
+223,Kyogo Furuhashi,"Jan 20, 1995 (27)","1,70m",Centre-Forward,€6.00m,right,Japan
+224,Ayase Ueda,"Aug 28, 1998 (23)","1,83m",Centre-Forward,€1.50m,right,Japan
+225,Shuto Machino,"Sep 30, 1999 (22)","1,85m",Centre-Forward,€700k,both,Japan
+226,Mao Hosoya,"Sep 7, 2001 (20)","1,77m",Centre-Forward,€550k,right,Japan
+227,Unai Simón,"Jun 11, 1997 (25)","1,90m",Goalkeeper,€25.00m,right,Spain
+228,David Raya,"Sep 15, 1995 (26)","1,83m",Goalkeeper,€22.00m,right,Spain
+229,Robert Sánchez,"Nov 18, 1997 (24)","1,97m",Goalkeeper,€16.00m,right,Spain
+230,Arnau Tenas,"May 30, 2001 (21)","1,85m",Goalkeeper,€1.50m,right,Spain
+231,Pau Torres,"Jan 16, 1997 (25)","1,91m",Centre-Back,€50.00m,left,Spain
+232,Aymeric Laporte,"May 27, 1994 (28)","1,89m",Centre-Back,€45.00m,left,Spain
+233,Iñigo Martínez,"May 17, 1991 (31)","1,82m",Centre-Back,€25.00m,left,Spain
+234,Diego Llorente,"Aug 16, 1993 (28)","1,86m",Centre-Back,€18.00m,right,Spain
+235,Eric García,"Jan 9, 2001 (21)","1,82m",Centre-Back,€18.00m,right,Spain
+236,Marcos Alonso,"Dec 28, 1990 (31)","1,89m",Left-Back,€12.00m,left,Spain
+237,Jordi Alba,"Mar 21, 1989 (33)","1,70m",Left-Back,€9.00m,left,Spain
+238,Alejandro Balde,"Oct 18, 2003 (18)","1,75m",Left-Back,€4.00m,left,Spain
+239,Daniel Carvajal,"Jan 11, 1992 (30)","1,73m",Right-Back,€18.00m,right,Spain
+240,César Azpilicueta,"Aug 28, 1989 (32)","1,78m",Right-Back,€9.00m,right,Spain
+241,Rodri,"Jun 22, 1996 (26)","1,91m",Defensive Midfield,€80.00m,right,Spain
+242,Hugo Guillamón,"Jan 31, 2000 (22)","1,78m",Defensive Midfield,€20.00m,right,Spain
+243,Sergio Busquets,"Jul 16, 1988 (33)","1,89m",Defensive Midfield,€9.00m,right,Spain
+244,Pedri,"Nov 25, 2002 (19)","1,74m",Central Midfield,€80.00m,right,Spain
+245,Gavi,"Aug 5, 2004 (17)","1,73m",Central Midfield,€60.00m,right,Spain
+246,Carlos Soler,"Jan 2, 1997 (25)","1,80m",Central Midfield,€50.00m,right,Spain
+247,Marcos Llorente,"Jan 30, 1995 (27)","1,84m",Central Midfield,€45.00m,right,Spain
+248,Koke,"Jan 8, 1992 (30)","1,76m",Central Midfield,€25.00m,right,Spain
+249,Dani Olmo,"May 7, 1998 (24)","1,79m",Attacking Midfield,€40.00m,right,Spain
+250,Ansu Fati,"Oct 31, 2002 (19)","1,78m",Left Winger,€60.00m,right,Spain
+251,Ferran Torres,"Feb 29, 2000 (22)","1,82m",Left Winger,€45.00m,right,Spain
+252,Marco Asensio,"Jan 21, 1996 (26)","1,82m",Right Winger,€40.00m,left,Spain
+253,Yéremy Pino,"Oct 20, 2002 (19)","1,72m",Right Winger,€40.00m,right,Spain
+254,Pablo Sarabia,"May 11, 1992 (30)","1,74m",Right Winger,€25.00m,left,Spain
+255,Nico Williams,"Jul 12, 2002 (19)","1,81m",Right Winger,€12.00m,right,Spain
+256,Raúl de Tomás,"Oct 17, 1994 (27)","1,80m",Centre-Forward,€25.00m,right,Spain
+257,Álvaro Morata,"Oct 23, 1992 (29)","1,89m",Centre-Forward,€25.00m,right,Spain
+258,Marc-André ter Stegen,"Apr 30, 1992 (30)","1,87m",Goalkeeper,€30.00m,right,Germany
+259,Manuel Neuer,"Mar 27, 1986 (36)","1,93m",Goalkeeper,€15.00m,right,Germany
+260,Kevin Trapp,"Jul 8, 1990 (31)","1,89m",Goalkeeper,€7.00m,right,Germany
+261,Oliver Baumann,"Jun 2, 1990 (32)","1,87m",Goalkeeper,€4.50m,right,Germany
+262,Antonio Rüdiger,"Mar 3, 1993 (29)","1,90m",Centre-Back,€40.00m,right,Germany
+263,Niklas Süle,"Sep 3, 1995 (26)","1,95m",Centre-Back,€35.00m,right,Germany
+264,Nico Schlotterbeck,"Dec 1, 1999 (22)","1,91m",Centre-Back,€33.00m,left,Germany
+265,Jonathan Tah,"Feb 11, 1996 (26)","1,95m",Centre-Back,€25.00m,right,Germany
+266,Thilo Kehrer,"Sep 21, 1996 (25)","1,86m",Centre-Back,€22.00m,right,Germany
+267,Matthias Ginter,"Jan 19, 1994 (28)","1,91m",Centre-Back,€18.00m,right,Germany
+268,Armel Bella-Kotchap,"Dec 11, 2001 (20)","1,90m",Centre-Back,€10.00m,right,Germany
+269,David Raum,"Apr 22, 1998 (24)","1,80m",Left-Back,€20.00m,left,Germany
+270,Christian Günter,"Feb 28, 1993 (29)","1,84m",Left-Back,€12.00m,left,Germany
+271,Lukas Klostermann,"Jun 3, 1996 (26)","1,89m",Right-Back,€18.00m,right,Germany
+272,Benjamin Henrichs,"Feb 23, 1997 (25)","1,85m",Right-Back,€14.00m,right,Germany
+273,Joshua Kimmich,"Feb 8, 1995 (27)","1,77m",Defensive Midfield,€80.00m,right,Germany
+274,Julian Weigl,"Sep 8, 1995 (26)","1,86m",Defensive Midfield,€22.00m,right,Germany
+275,Anton Stach,"Nov 15, 1998 (23)","1,94m",Defensive Midfield,€13.00m,both,Germany
+276,Leon Goretzka,"Feb 6, 1995 (27)","1,89m",Central Midfield,€65.00m,right,Germany
+277,Ilkay Gündogan,"Oct 24, 1990 (31)","1,80m",Central Midfield,€25.00m,right,Germany
+278,Florian Neuhaus,"Mar 16, 1997 (25)","1,85m",Central Midfield,€20.00m,right,Germany
+279,Kai Havertz,"Jun 11, 1999 (23)","1,90m",Attacking Midfield,€70.00m,left,Germany
+280,Jamal Musiala,"Feb 26, 2003 (19)","1,84m",Attacking Midfield,€65.00m,right,Germany
+281,Julian Brandt,"May 2, 1996 (26)","1,85m",Attacking Midfield,€25.00m,right,Germany
+282,Mario Götze,"Jun 3, 1992 (30)","1,76m",Attacking Midfield,€10.00m,right,Germany
+283,Leroy Sané,"Jan 11, 1996 (26)","1,83m",Left Winger,€60.00m,left,Germany
+284,Julian Draxler,"Sep 20, 1993 (28)","1,85m",Left Winger,€18.00m,right,Germany
+285,Serge Gnabry,"Jul 14, 1995 (26)","1,76m",Right Winger,€65.00m,right,Germany
+286,Karim Adeyemi,"Jan 18, 2002 (20)","1,80m",Right Winger,€35.00m,left,Germany
+287,Jonas Hofmann,"Jul 14, 1992 (29)","1,76m",Right Winger,€13.00m,right,Germany
+288,Thomas Müller,"Sep 13, 1989 (32)","1,85m",Second Striker,€22.00m,right,Germany
+289,Timo Werner,"Mar 6, 1996 (26)","1,80m",Centre-Forward,€35.00m,right,Germany
+290,Lukas Nmecha,"Dec 14, 1998 (23)","1,85m",Centre-Forward,€18.00m,right,Germany
+291,Youssoufa Moukoko,"Nov 20, 2004 (17)","1,79m",Centre-Forward,€15.00m,left,Germany
+292,Niclas Füllkrug,"Feb 9, 1993 (29)","1,89m",Centre-Forward,€3.00m,right,Germany
+293,Keylor Navas,"Dec 15, 1986 (35)","1,85m",Goalkeeper,€8.00m,right,Costa-rica
+294,Leonel Moreira,"Apr 2, 1990 (32)","1,76m",Goalkeeper,€275k,right,Costa-rica
+295,Aaron Cruz,"May 25, 1991 (31)","1,87m",Goalkeeper,€275k,right,Costa-rica
+296,Esteban Alvarado,"Apr 28, 1989 (33)","1,93m",Goalkeeper,€225k,right,Costa-rica
+297,Darryl Parker,"Mar 7, 1993 (29)","1,93m",Goalkeeper,€200k,right,Costa-rica
+298,Patrick Sequeira,"Mar 1, 1999 (23)","1,90m",Goalkeeper,€150k,right,Costa-rica
+299,Mauricio Vargas,"Aug 10, 1992 (29)","1,88m",Goalkeeper,€125k,,Costa-rica
+300,Juan Pablo Vargas,"Jun 6, 1995 (27)","1,92m",Centre-Back,€1.00m,left,Costa-rica
+301,Francisco Calvo,"Jul 8, 1992 (29)","1,80m",Centre-Back,€1.00m,left,Costa-rica
+302,Óscar Duarte,"Jun 3, 1989 (33)","1,86m",Centre-Back,€800k,right,Costa-rica
+303,Aarón Salazar,"May 15, 1999 (23)","1,81m",Centre-Back,€300k,right,Costa-rica
+304,Giancarlo González,"Feb 8, 1988 (34)","1,86m",Centre-Back,€275k,right,Costa-rica
+305,Kendall Waston,"Jan 1, 1988 (34)","1,96m",Centre-Back,€275k,right,Costa-rica
+306,Daniel Chacón,"Apr 11, 2001 (21)","1,83m",Centre-Back,€200k,right,Costa-rica
+307,Ronald Matarrita,"Jul 9, 1994 (27)","1,75m",Left-Back,€2.00m,left,Costa-rica
+308,Ian Lawrence,"May 28, 2002 (20)","1,79m",Left-Back,€200k,left,Costa-rica
+309,Bryan Oviedo,"Feb 18, 1990 (32)","1,72m",Left-Back,€200k,left,Costa-rica
+310,Ricardo Blanco,"May 12, 1989 (33)","1,70m",Right-Back,€225k,right,Costa-rica
+311,Keysher Fuller,"Jul 12, 1994 (27)","1,83m",Right-Back,€225k,right,Costa-rica
+312,Carlos Martínez,"Mar 30, 1999 (23)","1,75m",Right-Back,€175k,right,Costa-rica
+313,Yael López,"Dec 17, 1998 (23)","1,80m",Right-Back,€150k,right,Costa-rica
+314,Orlando Galo,"Aug 11, 2000 (21)","1,76m",Defensive Midfield,€300k,right,Costa-rica
+315,Yeltsin Tejeda,"Mar 17, 1992 (30)","1,79m",Defensive Midfield,€300k,right,Costa-rica
+316,Douglas López,"Sep 21, 1998 (23)","1,80m",Defensive Midfield,€250k,right,Costa-rica
+317,Jefferson Brenes,"Apr 13, 1997 (25)","1,73m",Defensive Midfield,€200k,right,Costa-rica
+318,Youstin Salas,"Jun 17, 1996 (26)","1,73m",Defensive Midfield,€200k,right,Costa-rica
+319,Jaylon Hadden,"Apr 9, 1998 (24)","1,76m",Defensive Midfield,€150k,right,Costa-rica
+320,Alejandro Bran,"Mar 5, 2001 (21)",-,Defensive Midfield,€125k,,Costa-rica
+321,Celso Borges,"May 27, 1988 (34)","1,82m",Central Midfield,€275k,right,Costa-rica
+322,Roan Wilson,"May 1, 2002 (20)","1,84m",Central Midfield,€150k,right,Costa-rica
+323,Gerson Torres,"Aug 28, 1997 (24)","1,76m",Right Midfield,€325k,left,Costa-rica
+324,Barlon Sequeira,"May 25, 1998 (24)","1,79m",Left Midfield,€250k,right,Costa-rica
+325,Álvaro Zamora,"Mar 9, 2002 (20)","1,80m",Left Midfield,-,right,Costa-rica
+326,Bryan Ruiz,"Aug 18, 1985 (36)","1,87m",Attacking Midfield,€250k,left,Costa-rica
+327,Ronaldo Araya,"Aug 3, 1999 (22)","1,76m",Attacking Midfield,€200k,right,Costa-rica
+328,Brandon Aguilera,"Jun 28, 2003 (19)","1,79m",Attacking Midfield,€125k,left,Costa-rica
+329,Jewison Bennette,"Jun 15, 2004 (18)","1,73m",Left Winger,€200k,left,Costa-rica
+330,Rachid Chirino,"Oct 21, 2000 (21)","1,74m",Left Winger,€175k,,Costa-rica
+331,Joel Campbell,"Jun 26, 1992 (30)","1,78m",Right Winger,€2.50m,left,Costa-rica
+332,Carlos Mora,"Mar 18, 2001 (21)","1,78m",Right Winger,€200k,right,Costa-rica
+333,Anthony Hernández,"Oct 11, 2001 (20)","1,79m",Right Winger,-,,Costa-rica
+334,Johan Venegas,"Nov 27, 1988 (33)","1,83m",Centre-Forward,€325k,right,Costa-rica
+335,Anthony Contreras,"Jan 29, 2000 (22)","1,80m",Centre-Forward,€275k,right,Costa-rica
+336,Brayan Rojas,"Nov 30, 1997 (24)","1,82m",Centre-Forward,€225k,right,Costa-rica
+337,Orlando Sinclair,"Apr 19, 1998 (24)","1,87m",Centre-Forward,€200k,right,Costa-rica
