@@ -1,13 +1,13 @@
-,Stadium,Date,Time,Home_team,Away_team,Home_goals,Away_goals
-0,Khalifa International Stadium,23-11-2022,14:00,Germany,Japan,1,2
-1,Al-Thumama Stadium,23-11-2022,17:00,Spain,Costa Rica,7,0
-2,Ahmad bin Ali Stadium,27-11-2022,11:00,Japan,Costa Rica,0,1
-3,Al-Bayt Stadium,27-11-2022,20:00,Spain,Germany,1,1
-4,Khalifa International Stadium,01-12-2022,20:00,Japan,Spain,2,1
-5,Al-Bayt Stadium,01-12-2022,20:00,Costa Rica,Germany,2,4
-6,Lusail Iconic Stadium,22-11-2022,11:00,Argentina,Saudi Arabia,1,2
-7,Stadium 974,22-11-2022,17:00,Mexico,Poland,0,0
-8,Education City Stadium,26-11-2022,14:00,Poland,Saudi Arabia,2,0
-9,Lusail Iconic Stadium,26-11-2022,20:00,Argentina,Mexico,2,0
-10,Lusail Iconic Stadium,30-11-2022,20:00,Saudi Arabia,Mexico,1,2
-11,Stadium 974,30-11-2022,20:00,Poland,Argentina,0,2
+,Date,Time,Home_goals,Away_goals,Stadium_ID,Home_team_ID,Away_team_ID
+0,23-11-2022,14:00,1,2,6,6,4
+1,23-11-2022,17:00,7,0,4,5,7
+2,27-11-2022,11:00,0,1,2,4,7
+3,27-11-2022,20:00,1,1,0,5,6
+4,01-12-2022,20:00,2,1,6,4,5
+5,01-12-2022,20:00,2,4,0,7,6
+6,22-11-2022,11:00,1,2,1,0,3
+7,22-11-2022,17:00,0,0,7,2,1
+8,26-11-2022,14:00,2,0,5,1,3
+9,26-11-2022,20:00,2,0,1,0,2
+10,30-11-2022,20:00,1,2,1,3,2
+11,30-11-2022,20:00,0,2,7,1,0
