@@ -11,7 +11,7 @@
                 {% if 'username' in session %}
                 Welcome {{ session['username'] }}!
                 {% else %}
-                Welcome!
+                Welcome, please <a href="/login" style="text-decoration: none;">login</a> to access all the features!
                 {% endif %}
             </h1>
         </div>
