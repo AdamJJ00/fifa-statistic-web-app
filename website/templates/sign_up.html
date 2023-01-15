@@ -1,32 +1,40 @@
-{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
-content %}
-<form method="POST">
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="container">
   <br /><br />
   <h3 align="center"><b>Sign Up</b></h3>
   <br />
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+  <div class="row justify-content-center">
+  <form method="POST" class="col-md-4">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+      <span id="password1HelpInline" class="form-text">
+        Must be at least 8 characters long.
+      </span>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="password_conf">Password (Confirm)</label>
+      <input type="password" class="form-control" id="password_conf" name="password_conf"
+        placeholder="Confirm password" />
+    </div>
+    <br />
+    <div class="form-group d-flex justify-content-end">
+    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+    </div>
+  </form>
   </div>
-  <br />
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" />
-  </div>
-  <br />
-  <div class="form-group">
-    <label for="password1">Password</label>
-    <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" />
-    <span id="password1HelpInline" class="form-text">
-      Must be at least 8 characters long.
-    </span>
-  </div>
-  <br />
-  <div class="form-group">
-    <label for="password2">Password (Confirm)</label>
-    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" />
-  </div>
-  <br />
-  <button type="submit" class="btn btn-outline-secondary">Submit</button>
-</form>
-{% endblock %}
+  {% endblock %}

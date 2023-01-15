@@ -1,14 +1,16 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
+<img src="{{ url_for('static', filename='app_logo_nobg.png') }}" alt="FIFA App Logo"
+    style="display: block; margin: auto;">
 <br />
-<br />
-<h1 align='center'><b>FIFA Stats APP</b></h1>
-<br />
-<br />
-<br />
+<h1 align='center'>
+    {% if 'username' in session %}
+    Welcome {{ session['username'] }}!
+    {% else %}
+    Welcome!
+    {% endif %}
+</h1>
 
-<h1 align='center'>Welcome to the FIFA World Cup 2022 Statistics web application!</h1>
-<br />
 <br />
 
 <h2>In this application, you will find a wealth of data and statistics about the participating teams, players, and

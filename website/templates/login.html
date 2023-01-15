@@ -1,22 +1,32 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
-%}
-<form method="POST">
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container">
   <br /><br />
   <h3 align="center"><b>Login</b></h3>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
-    <span id="emailHelp" class="form-text">
-      We'll never share your email with anyone else.
-    </span>
-  </div>
   <br />
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+  <div class="row justify-content-center">
+    <form method="POST" class="col-md-4">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
+        <span id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </span>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"/>
+      </div>
+      <br />
+      <div class="form-group d-flex justify-content-between">
+        <a class="btn btn-primary" href="/sign_up" role="button">Sign Up</a>
+        <button type="submit" class="btn btn-outline-secondary">Login</button>
+      </div>
+    </form>
   </div>
-  <br />
-  <button type="submit" class="btn btn-outline-secondary">Login</button>
-  <a class="btn btn-primary" href="/sign_up" role="button">Sign Up</a>
-</form>
+</div>
+
 {% endblock %}
