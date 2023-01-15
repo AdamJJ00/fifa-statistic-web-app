@@ -1,24 +1,33 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<img src="{{ url_for('static', filename='app_logo_nobg.png') }}" alt="FIFA App Logo"
-    style="display: block; margin: auto;">
-<br />
-<h1 align='center'>
-    {% if 'username' in session %}
-    Welcome {{ session['username'] }}!
-    {% else %}
-    Welcome!
-    {% endif %}
-</h1>
+{% extends "base.html" %}
 
-<br />
+{% block title %}Home{% endblock %}
 
-<h2>In this application, you will find a wealth of data and statistics about the participating teams, players, and
-    matches. You can view detailed team and player statistics, such as the number of goals scored, assists, yellow
-    cards, and red cards. <br /> <br />
-    FIFA World Cup 2022 Statistics web application also provides some interesting information about Qatar, the host of
-    the tournament, and specially prepared infrastructure for the World Cup like stadiums. <br /> <br />
-    Whether you are a die-hard soccer fan or just interested in the World Cup, this application has something for you.
-    We hope you enjoy using it and learning more about the World Cup in Qatar.</h2>
+{% block content %}
+<div class="container my-5">
 
+    <div class="card my-5">
+        <div class="card-header">
+            <h1 class="text-center my-3">
+                {% if 'username' in session %}
+                Welcome {{ session['username'] }}!
+                {% else %}
+                Welcome!
+                {% endif %}
+            </h1>
+        </div>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='app_logo_nobg.png') }}" alt="FIFA App Logo" class="img-fluid">
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-title">In this application, you will find a wealth of data and statistics about the
+                participating teams, players, and matches. You can view detailed team and player statistics, such as the
+                number of goals scored, assists, yellow cards, and red cards. <br /> <br /> FIFA World Cup 2022
+                Statistics web application also provides some interesting information about Qatar, the host of the
+                tournament, and specially prepared infrastructure for the World Cup like stadiums. <br /> <br /> Whether
+                you are a die-hard soccer fan or just interested in the World Cup, this application has something for
+                you. We hope you enjoy using it and learning more about the World Cup in Qatar.</h2>
+        </div>
+    </div>
+</div>
 {% endblock %}
