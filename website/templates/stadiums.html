@@ -1,12 +1,27 @@
-{% extends "base.html" %} {% block title %}Stadiums{% endblock %} {% block content
-%}
-<br />
-<br />
-<h1 align='center'><b>FIFA Stats APP</b></h1>
-<br />
-<br />
-<br />
+{% extends "base.html" %}
+{% block title %}Stadiums{% endblock %}
 
-<h1 align='center'>Stadiums page!</h1>
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Stadiums</h1>
+    <hr>
+    <div id="plot"></div>
+    {% for stadium in stadiums %}
+    <div class="row my-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='stadiums/' + stadium[1] + '.jpeg') }}"
+                class="card-img-top img-responsive mt-2" alt="{{ stadium[1] }}">
+            <div class="card-body">
+                <h2 class="card-title">{{ stadium[1] }}</h2>
+                <p class="card-text">{{ stadium[4] }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<script>
+    var data = JSON.parse('{{ html_string | safe }}');
+    Plotly.newPlot('plot', data);
+</script>
 
 {% endblock %}
