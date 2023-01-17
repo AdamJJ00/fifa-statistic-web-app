@@ -1,12 +1,24 @@
-{% extends "base.html" %} {% block title %}Players{% endblock %} {% block content
-%}
-<br />
-<br />
-<h1 align='center'><b>FIFA Stats APP</b></h1>
-<br />
-<br />
-<br />
+{% extends "base.html" %}
 
-<h1 align='center'>Players page!</h1>
+{% block title %}Players{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="my-4">Players</h1>
+    <hr>
+    <div id="plot"></div>
+<div id="plot_2"></div>
+</div>
+
+<script>
+    var data = JSON.parse('{{ html_string | safe }}');
+    Plotly.newPlot('plot', data);
+</script>
+
+    <script>
+    var data_2 = JSON.parse('{{ html_string_2 | safe }}');
+    Plotly.newPlot('plot_2', data_2);
+</script>
 
 {% endblock %}
