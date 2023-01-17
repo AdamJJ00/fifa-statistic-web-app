@@ -172,7 +172,7 @@ def teams():
             "Losses",
             "Goals_for",
             "Goals_against",
-            "Points"
+            "Points",
         ],
     )
 
@@ -186,7 +186,7 @@ def teams():
             "Position",
             "Market_value",
             "Better_foot",
-            "Team_ID"
+            "Team_ID",
         ],
     )
 
@@ -194,27 +194,44 @@ def teams():
     c.close()
     conn.close()
 
-    teams_grpd_value = players_df[['Market_value', 'Team_ID']]
-    teams_grpd_value = teams_grpd_value.groupby(['Team_ID']).sum()
-    team_names = teams_df['Team_name']
-    teams_grpd_value['Team_Name'] = team_names
-    teams_grpd_value = teams_grpd_value.sort_values(by=['Market_value'], ascending=True)
+    teams_grpd_value = players_df[["Market_value", "Team_ID"]]
+    teams_grpd_value = teams_grpd_value.groupby(["Team_ID"]).sum()
+    team_names = teams_df["Team_name"]
+    teams_grpd_value["Team_Name"] = team_names
+    teams_grpd_value = teams_grpd_value.sort_values(by=["Market_value"], ascending=True)
 
     # Generate figures
-    fig = px.bar(teams_grpd_value, x="Market_value", y="Team_Name", barmode="group", template='plotly_white',
-                 title="Market value of teams (countries)",
-                 text=teams_df.Coach)
+    fig = px.bar(
+        teams_grpd_value,
+        x="Market_value",
+        y="Team_Name",
+        barmode="group",
+        template="plotly_white",
+        title="Market value of teams (countries)",
+        text=teams_df.Coach,
+    )
     fig.update_xaxes(title_text="Market value")
     fig.update_yaxes(title_text="Teams")
     fig.update_traces(
-        marker_color=['rgb(102, 197, 204)', 'rgb(246, 207, 113)', 'rgb(248, 156, 116)', 'rgb(220, 176, 242)',
-                      'rgb(135, 197, 95)', 'rgb(158, 185, 243)', 'rgb(254, 136, 177)', 'rgb(201, 219, 116)'],
-        marker_line_color='rgb(0,0,0)',
-        marker_line_width=1.5, opacity=0.95)
+        marker_color=[
+            "rgb(102, 197, 204)",
+            "rgb(246, 207, 113)",
+            "rgb(248, 156, 116)",
+            "rgb(220, 176, 242)",
+            "rgb(135, 197, 95)",
+            "rgb(158, 185, 243)",
+            "rgb(254, 136, 177)",
+            "rgb(201, 219, 116)",
+        ],
+        marker_line_color="rgb(0,0,0)",
+        marker_line_width=1.5,
+        opacity=0.95,
+    )
 
     html_string = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
     return render_template("teams.html", teams=teams, html_string=html_string)
+
 
 @auth.route("/players")
 @require_login
@@ -244,7 +261,7 @@ def players():
             "Losses",
             "Goals_for",
             "Goals_against",
-            "Points"
+            "Points",
         ],
     )
 
@@ -258,7 +275,7 @@ def players():
             "Position",
             "Market_value",
             "Better_foot",
-            "Team_ID"
+            "Team_ID",
         ],
     )
 
@@ -267,30 +284,75 @@ def players():
     conn.close()
 
     # Generate the plotly figure_1
-    players_top_value = players_df.nlargest(15, ['Market_value'])
-    fig = px.bar(players_top_value, x="Name", y="Market_value", barmode="group", template='plotly_white',
-                 title="Top 15 players with the highest market value",
-                 text=players_top_value.Position)
+    players_top_value = players_df.nlargest(15, ["Market_value"])
+    fig = px.bar(
+        players_top_value,
+        x="Name",
+        y="Market_value",
+        barmode="group",
+        template="plotly_white",
+        title="Top 15 players with the highest market value",
+        text=players_top_value.Position,
+    )
     fig.update_xaxes(title_text="Players")
     fig.update_yaxes(title_text="Market value")
-    fig.update_traces(marker_color='#a1435f', marker_line_color='rgb(0,0,0)',
-                      marker_line_width=1.5, opacity=0.95)
+    fig.update_traces(
+        marker_color="#a1435f",
+        marker_line_color="rgb(0,0,0)",
+        marker_line_width=1.5,
+        opacity=0.95,
+    )
 
     html_string = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
     # Generate the plotly figure_2
-    players_tallest = players_df.nlargest(15, ['Height_cm'])
-    fig2 = px.bar(players_tallest, x="Height_cm", y="Name", barmode="group", template='plotly_white',
-                 title="Top 15 tallest players",
-                 text=players_top_value.Position)
+    players_tallest = players_df.nlargest(15, ["Height_cm"])
+    fig2 = px.bar(
+        players_tallest,
+        x="Height_cm",
+        y="Name",
+        barmode="group",
+        template="plotly_white",
+        title="Top 15 tallest players",
+        text=players_top_value.Position,
+    )
     fig2.update_xaxes(title_text="Height", range=[185, 200])
     fig2.update_yaxes(title_text="Players")
-    fig2.update_traces(marker_color='#63C085', marker_line_color='rgb(0,0,0)',
-                      marker_line_width=1.5, opacity=0.95)
+    fig2.update_traces(
+        marker_color="#63C085",
+        marker_line_color="rgb(0,0,0)",
+        marker_line_width=1.5,
+        opacity=0.95,
+    )
 
     html_string_2 = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
 
-    return render_template("players.html", players=players, html_string=html_string, html_string_2=html_string_2)
+    # Format Market_value column to have the € sign and the m or k
+    # meaning million or thousands
+    def format_value(val):
+        if val >= 1000000:
+            return "€" + str(val // 1000000) + ".00m"
+        else:
+            return "€" + str(val // 1000) + "k"
+
+    players_df["Market_value"] = players_df["Market_value"].apply(format_value)
+
+    # Map Team_ID to Team_name and drop Team_ID column
+    teams_map = dict(zip(teams_df.Team_ID, teams_df.Team_name))
+    players_df["Team"] = players_df["Team_ID"].map(teams_map)
+    players_df = players_df.drop(["Team_ID"], axis=1)
+
+    # Map Better_foot to Right, Left or Both based on the value
+    players_df["Better_foot"] = players_df["Better_foot"].map(
+        {"R": "Right", "L": "Left", "B": "Both"}
+    )
+
+    return render_template(
+        "players.html",
+        players=players_df,
+        html_string=html_string,
+        html_string_2=html_string_2,
+    )
 
 
 @auth.route("/sign_up", methods=["GET", "POST"])

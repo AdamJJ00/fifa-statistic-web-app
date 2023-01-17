@@ -7,18 +7,77 @@
 <div class="container">
     <h1 class="my-4">Players</h1>
     <hr>
+    <div class="form-group my-2">
+        <label for="team-name-filter">Filter by Team:</label>
+        <select class="form-select" style="width: 200px;" id="team-name-filter">
+            <option value="Poland">Poland</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Japan">Japan</option>
+            <option value="Spain">Spain</option>
+            <option value="Germany">Germany</option>
+            <option value="Costa Rica">Costa Rica</option>
+        </select>
+    </div>
+    <div class="card">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of birth</th>
+                    <th>Height in cm</th>
+                    <th>Position</th>
+                    <th>Market value</th>
+                    <th>Better foot</th>
+                    <th style="display: none;">Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in players.iterrows() %}
+                <tr>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.Date_of_birth }}</td>
+                    <td>{{ row.Height_cm }}</td>
+                    <td>{{ row.Position }}</td>
+                    <td>{{ row.Market_value }}</td>
+                    <td>{{ row.Better_foot }}</td>
+                    <td style="display: none;">{{ row.Team }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </tbody>
+        </table>
+    </div>
     <div id="plot"></div>
-<div id="plot_2"></div>
+    <div id="plot_2"></div>
 </div>
 
 <script>
     var data = JSON.parse('{{ html_string | safe }}');
     Plotly.newPlot('plot', data);
-</script>
 
-    <script>
     var data_2 = JSON.parse('{{ html_string_2 | safe }}');
     Plotly.newPlot('plot_2', data_2);
-</script>
 
+    function filterTable() {
+        const selectedValue = this.value ? this.value : "Poland";
+        const rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const teamName = row.querySelector('td:nth-child(7)').textContent;
+            if (selectedValue === teamName) {
+                row.style.display = 'table-row';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    const teamNameFilter = document.querySelector('#team-name-filter');
+    teamNameFilter.value = "Poland"
+    document.addEventListener("DOMContentLoaded", filterTable);
+    teamNameFilter.addEventListener('change', filterTable);
+
+</script>
 {% endblock %}
