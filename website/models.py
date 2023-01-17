@@ -1,8 +1,8 @@
 '''
 -- SQL query to retrieve the schedule of matches for Group E
-SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as home_team, a.Team_name as away_team
+SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score
 FROM matches JOIN teams ON matches.home_team_id=teams.team_id JOIN teams a ON matches.away_team_id=a.team_id JOIN stadiums ON stadiums.stadium_id = matches.stadium_id
-WHERE teams.group_letter='E' OR a.group_letter='E';
+WHERE teams.group_letter='E'
 
 
 -- SQL query to retrieve the top 10 goal scorers in the tournament
@@ -93,70 +93,83 @@ ORDER BY capacity DESC
 LIMIT 10;
 
 -- SQL query to retrieve top 10 fastest scoring players
-SELECT players.name, events.minute as fastest_goal
+SELECT players.name, a.team_name || ' - ' || b.team_name as 'Game', matches.date, events.minute as fastest_goal
 FROM players
 JOIN events ON players.player_id = events.player_id
+JOIN matches ON matches.match_id = events.match_id
+JOIN teams a ON a.team_id = matches.home_team_id
+JOIN teams b ON b.team_id = matches.away_team_id
 WHERE events.type = 'G'
 GROUP BY players.player_id
 ORDER BY fastest_goal
 LIMIT 10;
 
 -- SQL query to retrieve the top 5 teams which recived the earliest yellow cards on tournament
-SELECT teams.team_name, events.minute as earliest_yellow_card
+SELECT teams.team_name,  a.team_name || ' - ' || b.team_name as 'Game', matches.date, events.minute as earliest_yellow_card
 FROM teams
 JOIN players ON teams.team_id = players.team_id
 JOIN events ON players.player_id = events.player_id
+JOIN matches ON matches.match_id = events.match_id
+JOIN teams a ON a.team_id = matches.home_team_id
+JOIN teams b ON b.team_id = matches.away_team_id
 WHERE events.type = 'Y'
 GROUP BY teams.team_name
 ORDER BY earliest_yellow_card
 LIMIT 5;
 
 -- SQL query to retrieve the top 10 matches with the highest scores
-SELECT matches.match_id, matches.home_goals + matches.away_goals as total_goals
+SELECT a.team_name || ' - ' || b.team_name as 'Match', matches.home_goals + matches.away_goals as total_goals
 FROM matches
+JOIN teams a ON a.team_id = matches.home_team_id
+JOIN teams b ON b.team_id = matches.away_team_id
 ORDER BY total_goals DESC
 LIMIT 10;
 
 -- SQL query to retrieve top 5 matches with most yellow/red cards
-SELECT matches.match_id, COUNT(events.type) as cards
+SELECT a.team_name || ' - ' || b.team_name as 'Match', COUNT(events.type) as cards
 FROM matches
 JOIN events ON matches.match_id = events.match_id
+JOIN teams a ON a.team_id = matches.home_team_id
+JOIN teams b ON b.team_id = matches.away_team_id
 WHERE events.type IN ('Y', 'R')
 GROUP BY matches.match_id
 ORDER BY cards DESC
 LIMIT 5;
 
 -- SQL query to retrieve all matches which took place at selected stadium
-SELECT matches.*
-FROM matches
-JOIN stadiums ON matches.stadium_id = stadiums.stadium_id
+SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score
+FROM matches JOIN teams ON matches.home_team_id=teams.team_id JOIN teams a ON matches.away_team_id=a.team_id JOIN stadiums ON stadiums.stadium_id = matches.stadium_id
 WHERE stadiums.stadium_name = 'Lusail Stadium';
 
 
 -- SQL query to retrieve top 5 youngest players
-SELECT players.name, players.date_of_birth as Date_of_birth
+SELECT players.name, teams.team_name, players.date_of_birth as Date_of_birth
 FROM players
+JOIN teams ON teams.team_id = players.team_id
 ORDER BY Date_of_birth DESC
 LIMIT 5;
 
 
 -- SQL query to retrieve top 5 oldest players
-SELECT players.name, julianday('now') - julianday(players.data_of_birth) as Date_of_birth
+SELECT players.name, teams.team_name, players.date_of_birth as Date_of_birth
 FROM players
+JOIN teams ON teams.team_id = players.team_id
 ORDER BY Date_of_birth ASC
 LIMIT 5;
 
 
 -- SQL query to retrieve the top 5 tallest players
-SELECT players.name, players.height_cm as height
+SELECT players.name, teams.team_name, players.position, players.height_cm as height
 FROM players
+JOIN teams ON teams.team_id = players.team_id
 ORDER BY height DESC
 LIMIT 5;
 
 
 -- SQL query to retrieve the top 5 shortest players
-SELECT players.name, players.height_cm as height
+SELECT players.name, teams.team_name, players.position, players.height_cm as height
 FROM players
+JOIN teams ON teams.team_id = players.team_id
 ORDER BY height ASC
 LIMIT 5;
 '''
