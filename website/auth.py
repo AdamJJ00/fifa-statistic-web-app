@@ -303,19 +303,19 @@ def sign_up():
 
         if len(email) < 5:
             flash(
-                "Your email is too short. It must contain least 5 characters.",
+                "Your email is too short. It must contain at least 5 characters.",
                 category="error",
             )
         elif len(username) < 2:
             flash(
-                "Your username is too short. It must contain least 2 characters.",
+                "Your username is too short. It must contain at least 2 characters.",
                 category="error",
             )
         elif password != password_conf:
             flash("Your passwords don't match.", category="error")
         elif len(password) < 8:
             flash(
-                "Your password is too short. It must contain least 8 characters.",
+                "Your password is too short. It must contain at least 8 characters.",
                 category="error",
             )
         else:

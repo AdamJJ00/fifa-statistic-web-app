@@ -54,7 +54,7 @@ LIMIT 5;
 
 
 -- SQL query to retrieve the top 10 oldest teams (based on players age)
-SELECT teams.team_name, AVG(julianday('now') - julianday(players.date_of_birth)) as average_age
+SELECT teams.team_name, AVG((julianday('now') - julianday(players.date_of_birth))/365) as average_age
 FROM teams
 JOIN players ON teams.team_id = players.team_id
 GROUP BY teams.team_name
@@ -62,7 +62,7 @@ ORDER BY average_age DESC
 LIMIT 10;
 
 -- SQL query to retrieve the top 10 youngest teams (based on players age)
-SELECT teams.team_name, AVG(julianday('now') - julianday(players.date_of_birth)) as average_age
+SELECT teams.team_name, AVG((julianday('now') - julianday(players.date_of_birth))/365) as average_age
 FROM teams
 JOIN players ON teams.team_id = players.team_id
 GROUP BY teams.team_name
