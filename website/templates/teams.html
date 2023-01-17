@@ -2,15 +2,85 @@
 {% block title %}Teams{% endblock %}
 {% block content %}
 
-    <div class="container">
+<div class="container mb-5">
     <h1 class="my-4">Teams</h1>
     <hr>
+    <div class="form-group my-2">
+        <label for="group-letter-filter">Filter by Group Letter:</label>
+        <select class="form-select" style="width: 200px;" id="group-letter-filter">
+            <option value="">All</option>
+            <option value="C">Group C</option>
+            <option value="E">Group E</option>
+        </select>
+    </div>
+    <div class="card">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Coach</th>
+                    <th>Capitan</th>
+                    <th>Group Letter</th>
+                    <th>Wins</th>
+                    <th>Draws</th>
+                    <th>Losses</th>
+                    <th>Goals For</th>
+                    <th>Goals Against</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in teams %}
+                <tr>
+                    <td>{{ team[1] }}</td>
+                    <td>{{ team[2] }}</td>
+                    <td>{{ team[3] }}</td>
+                    <td>{{ team[4] }}</td>
+                    <td>{{ team[5] }}</td>
+                    <td>{{ team[6] }}</td>
+                    <td>{{ team[7] }}</td>
+                    <td>{{ team[8] }}</td>
+                    <td>{{ team[9] }}</td>
+                    <td>{{ team[10] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
     <div id="plot"></div>
+    <div class="row">
+        <div class="col-6 px-4">
+            <img src="{{ url_for('static', filename='charts/team_plot1.png') }}" alt="Average height by team"
+                class="img-fluid">
+        </div>
+        <div class="col-6 px-4">
+            <img src="{{ url_for('static', filename='charts/team_plot1.png') }}" alt="Average value by team"
+                class="img-fluid">
+        </div>
+    </div>
 </div>
 
 <script>
     var data = JSON.parse('{{ html_string | safe }}');
     Plotly.newPlot('plot', data);
+
+    const groupLetterFilter = document.querySelector('#group-letter-filter');
+    groupLetterFilter.addEventListener('change', filterTable);
+
+    function filterTable() {
+        const selectedValue = this.value;
+        const rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const groupLetter = row.querySelector('td:nth-child(4)').textContent;
+            if (selectedValue === '' || selectedValue === groupLetter) {
+                row.style.display = 'table-row';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
 </script>
 
 {% endblock %}
