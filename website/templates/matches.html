@@ -1,12 +1,163 @@
-{% extends "base.html" %} {% block title %}Matches{% endblock %} {% block content
-%}
-<br />
-<br />
-<h1 align='center'><b>FIFA Stats APP</b></h1>
-<br />
-<br />
-<br />
+{% extends "base.html" %}
+{% block title %}Matches{% endblock %}
+{% block content %}
 
-<h1 align='center'>Matches page!</h1>
+    <div class="container mb-5">
+    <h1 class="my-4">Stats</h1>
+    <hr>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Schedule and results of matches for Group E</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Stadium name</th>
+                    <th>Home team</th>
+                    <th>Away team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_1 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                    <td>{{ query[4] }}</td>
+                    <td>{{ query[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Schedule and results of matches for Group C</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Stadium name</th>
+                    <th>Home team</th>
+                    <th>Away team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_2 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                    <td>{{ query[4] }}</td>
+                    <td>{{ query[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 matches with the highest scores</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Total goals</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_3 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 matches with most yellow/red cards</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Number of cards</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_4 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">All matches which took place at Lusail Stadium stadium</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Stadium name</th>
+                    <th>Home team</th>
+                    <th>Away team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_5 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                    <td>{{ query[4] }}</td>
+                    <td>{{ query[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">All matches which took place at Al Bayt Stadium stadium</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Stadium name</th>
+                    <th>Home team</th>
+                    <th>Away team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in matches_query_5 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                    <td>{{ query[4] }}</td>
+                    <td>{{ query[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}

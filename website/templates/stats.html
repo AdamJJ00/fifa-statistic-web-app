@@ -1,12 +1,353 @@
-{% extends "base.html" %} {% block title %}Stats{% endblock %} {% block content
-%}
-<br />
-<br />
-<h1 align='center'><b>FIFA Stats APP</b></h1>
-<br />
-<br />
-<br />
+{% extends "base.html" %}
+{% block title %}Stats{% endblock %}
+{% block content %}
 
-<h1 align='center'>Stats page!</h1>
+    <div class="container mb-5">
+    <h1 class="my-4">Stats</h1>
+    <hr>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 goal scorers in the tournament</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Goals</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_1 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 5 teams with most left-footed players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Number of left foot players</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_2 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card">
+        <h3 class="my-4 text-center">Number of goals scored by each team</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Goals</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_3 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top teams with highest market value</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Market value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_4 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 5 teams with the most yellow cards</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Yellow cards</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_5 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 4 oldest teams (based on players age)</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Average age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_6 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 4 youngest teams (based on players age)</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Average age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_7 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 4 teams with tallest players (on average)</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Average height</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_8 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 4 teams with shortest players (on average)</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Average height</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_9 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top stadiums with the highest capacity</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Stadium name</th>
+                    <th>Capacity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_10 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 fastest scoring players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Game</th>
+                    <th>Date</th>
+                    <th>Fastest goal (min)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_11 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 5 teams which recived the earliest yellow card on tournament</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Team name</th>
+                    <th>Game</th>
+                    <th>Date</th>
+                    <th>Fastest yellow card (min)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_12 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 youngest players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Team name</th>
+                    <th>Date of birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_13 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 oldest players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Team name</th>
+                    <th>Date of birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_14 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 tallest players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Team name</th>
+                    <th>Position</th>
+                    <th>Height</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_15 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3 class="my-4 text-center">Top 10 shortest players</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Player name</th>
+                    <th>Team name</th>
+                    <th>Position</th>
+                    <th>Height</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for query in query_16 %}
+                <tr>
+                    <td>{{ query[0] }}</td>
+                    <td>{{ query[1] }}</td>
+                    <td>{{ query[2] }}</td>
+                    <td>{{ query[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
 
 {% endblock %}

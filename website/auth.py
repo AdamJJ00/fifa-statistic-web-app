@@ -72,13 +72,232 @@ def logout():
 @auth.route("/stats")
 @require_login
 def stats():
-    return render_template("stats.html")
+    conn = sqlite3.connect("db/fifa_app.db")
+    c = conn.cursor()
+
+    c.execute(
+        "SELECT p.name, SUM(e.type = 'G') as Goals \
+        FROM events e \
+        JOIN players p ON e.player_id = p.player_id \
+        GROUP BY e.player_id \
+        ORDER BY Goals DESC LIMIT 10;")
+    query_1 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, COUNT(players.team_id) as Left_foot_players \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        WHERE players.better_foot = 'L' \
+        GROUP BY teams.team_name \
+        HAVING left_foot_players >= 1 \
+        ORDER BY Left_foot_players DESC LIMIT 5;")
+    query_2 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, SUM(CASE WHEN events.type = 'G' THEN 1 ELSE 0 END) as Goals \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        JOIN events ON players.player_id = events.player_id \
+        GROUP BY teams.team_name \
+        ORDER BY Goals DESC;")
+    query_3 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, SUM(players.market_value) as Market_value \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        GROUP BY teams.team_name \
+        ORDER BY Market_value DESC;")
+    query_4 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, COUNT(CASE WHEN events.type = 'Y' THEN 1 ELSE 0 END) as yellow_cards \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        JOIN events ON players.player_id = events.player_id \
+        WHERE events.type = 'Y' \
+        GROUP BY teams.team_name \
+        ORDER BY yellow_cards DESC \
+        LIMIT 5;")
+    query_5 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, ROUND(AVG((julianday('now') - julianday(players.date_of_birth))/365), 2) as average_age \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        GROUP BY teams.team_name \
+        ORDER BY average_age DESC \
+        LIMIT 4;")
+    query_6 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, ROUND(AVG((julianday('now') - julianday(players.date_of_birth))/365), 2) as average_age \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        GROUP BY teams.team_name \
+        ORDER BY average_age ASC \
+        LIMIT 4;")
+    query_7 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, ROUND(AVG(players.height_cm), 2) as height \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        GROUP BY teams.team_name \
+        ORDER BY height DESC \
+        LIMIT 4;")
+    query_8 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name, ROUND(AVG(players.height_cm), 2) as height \
+                FROM teams \
+                JOIN players ON teams.team_id = players.team_id \
+                GROUP BY teams.team_name \
+                ORDER BY height ASC \
+                LIMIT 4;")
+    query_9 = c.fetchall()
+
+    c.execute(
+        "SELECT stadiums.stadium_name, stadiums.capacity \
+        FROM stadiums \
+        ORDER BY capacity DESC;")
+    query_10 = c.fetchall()
+
+    c.execute(
+        "SELECT players.name, a.team_name || ' - ' || b.team_name as 'Game', matches.date, events.minute as fastest_goal \
+        FROM players \
+        JOIN events ON players.player_id = events.player_id \
+        JOIN matches ON matches.match_id = events.match_id \
+        JOIN teams a ON a.team_id = matches.home_team_id \
+        JOIN teams b ON b.team_id = matches.away_team_id \
+        WHERE events.type = 'G' \
+        GROUP BY players.player_id \
+        ORDER BY fastest_goal \
+        LIMIT 10;")
+    query_11 = c.fetchall()
+
+    c.execute(
+        "SELECT teams.team_name,  a.team_name || ' - ' || b.team_name as 'Game', matches.date, events.minute as earliest_yellow_card \
+        FROM teams \
+        JOIN players ON teams.team_id = players.team_id \
+        JOIN events ON players.player_id = events.player_id \
+        JOIN matches ON matches.match_id = events.match_id \
+        JOIN teams a ON a.team_id = matches.home_team_id \
+        JOIN teams b ON b.team_id = matches.away_team_id \
+        WHERE events.type = 'Y' \
+        GROUP BY teams.team_name \
+        ORDER BY earliest_yellow_card \
+        LIMIT 5;")
+    query_12 = c.fetchall()
+
+    c.execute(
+        "SELECT players.name, teams.team_name, players.date_of_birth as Date_of_birth \
+        FROM players \
+        JOIN teams ON teams.team_id = players.team_id \
+        ORDER BY Date_of_birth DESC \
+        LIMIT 10;")
+    query_13 = c.fetchall()
+
+    c.execute(
+        "SELECT players.name, teams.team_name, players.date_of_birth as Date_of_birth \
+        FROM players \
+        JOIN teams ON teams.team_id = players.team_id \
+        ORDER BY Date_of_birth ASC \
+        LIMIT 10;")
+    query_14 = c.fetchall()
+
+    c.execute(
+        "SELECT players.name, teams.team_name, players.position, players.height_cm as height \
+        FROM players \
+        JOIN teams ON teams.team_id = players.team_id \
+        ORDER BY height DESC \
+        LIMIT 10;")
+    query_15 = c.fetchall()
+
+    c.execute(
+        "SELECT players.name, teams.team_name, players.position, players.height_cm as height \
+        FROM players \
+        JOIN teams ON teams.team_id = players.team_id \
+        ORDER BY height ASC \
+        LIMIT 10;")
+    query_16 = c.fetchall()
+
+    c.close()
+    conn.close()
+    return render_template("stats.html", query_1=query_1, query_2=query_2, query_3=query_3, query_4=query_4,
+                           query_5=query_5, query_6=query_6, query_7=query_7, query_8=query_8, query_9=query_9,
+                           query_10=query_10, query_11=query_11, query_12=query_12, query_13=query_13, query_14=query_14,
+                           query_15=query_15, query_16=query_16)
 
 
 @auth.route("/matches")
 @require_login
 def matches():
-    return render_template("matches.html")
+    conn = sqlite3.connect("db/fifa_app.db")
+    c = conn.cursor()
+
+    c.execute(
+        "SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score \
+        FROM matches \
+        JOIN teams ON matches.home_team_id=teams.team_id \
+        JOIN teams a ON matches.away_team_id=a.team_id \
+        JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
+        WHERE teams.group_letter='E'")
+    matches_query_1 = c.fetchall()
+
+    c.execute(
+        "SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score \
+        FROM matches \
+        JOIN teams ON matches.home_team_id=teams.team_id \
+        JOIN teams a ON matches.away_team_id=a.team_id \
+        JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
+        WHERE teams.group_letter='C'")
+    matches_query_2 = c.fetchall()
+
+    c.execute(
+        "SELECT a.team_name || ' - ' || b.team_name as 'Match', matches.home_goals + matches.away_goals as total_goals \
+        FROM matches \
+        JOIN teams a ON a.team_id = matches.home_team_id \
+        JOIN teams b ON b.team_id = matches.away_team_id \
+        ORDER BY total_goals DESC \
+        LIMIT 10;")
+    matches_query_3 = c.fetchall()
+
+    c.execute(
+        "SELECT a.team_name || ' - ' || b.team_name as 'Match', COUNT(events.type) as cards \
+        FROM matches \
+        JOIN events ON matches.match_id = events.match_id \
+        JOIN teams a ON a.team_id = matches.home_team_id \
+        JOIN teams b ON b.team_id = matches.away_team_id \
+        WHERE events.type IN ('Y', 'R') \
+        GROUP BY matches.match_id \
+        ORDER BY cards DESC \
+        LIMIT 10;")
+    matches_query_4 = c.fetchall()
+
+    c.execute(
+        "SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score \
+        FROM matches \
+        JOIN teams ON matches.home_team_id=teams.team_id \
+        JOIN teams a ON matches.away_team_id=a.team_id \
+        JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
+        WHERE stadiums.stadium_name = 'Lusail Stadium';")
+    matches_query_5 = c.fetchall()
+
+    c.execute(
+        "SELECT matches.Date, matches.Time, stadiums.Stadium_name, teams.Team_name as Home_team, a.Team_name as Away_team, matches.home_goals || ':' || matches.away_goals as Score \
+        FROM matches \
+        JOIN teams ON matches.home_team_id=teams.team_id \
+        JOIN teams a ON matches.away_team_id=a.team_id \
+        JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
+        WHERE stadiums.stadium_name = 'Al Bayt Stadium';")
+    matches_query_6 = c.fetchall()
+
+    c.close()
+    conn.close()
+    return render_template("matches.html", matches_query_1=matches_query_1, matches_query_2=matches_query_2, matches_query_3=matches_query_3, matches_query_4=matches_query_4,
+                           matches_query_5=matches_query_5, matches_query_6=matches_query_6)
+
 
 
 @auth.route("/stadiums")
