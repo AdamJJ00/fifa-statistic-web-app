@@ -80,7 +80,8 @@ def stats():
         FROM events e \
         JOIN players p ON e.player_id = p.player_id \
         GROUP BY e.player_id \
-        ORDER BY Goals DESC LIMIT 10;")
+        ORDER BY Goals DESC LIMIT 5;"
+    )
     query_1 = c.fetchall()
 
     c.execute(
@@ -90,7 +91,8 @@ def stats():
         WHERE players.better_foot = 'L' \
         GROUP BY teams.team_name \
         HAVING left_foot_players >= 1 \
-        ORDER BY Left_foot_players DESC LIMIT 5;")
+        ORDER BY Left_foot_players DESC LIMIT 5;"
+    )
     query_2 = c.fetchall()
 
     c.execute(
@@ -99,7 +101,8 @@ def stats():
         JOIN players ON teams.team_id = players.team_id \
         JOIN events ON players.player_id = events.player_id \
         GROUP BY teams.team_name \
-        ORDER BY Goals DESC;")
+        ORDER BY Goals DESC;"
+    )
     query_3 = c.fetchall()
 
     c.execute(
@@ -107,7 +110,8 @@ def stats():
         FROM teams \
         JOIN players ON teams.team_id = players.team_id \
         GROUP BY teams.team_name \
-        ORDER BY Market_value DESC;")
+        ORDER BY Market_value DESC;"
+    )
     query_4 = c.fetchall()
 
     c.execute(
@@ -118,7 +122,8 @@ def stats():
         WHERE events.type = 'Y' \
         GROUP BY teams.team_name \
         ORDER BY yellow_cards DESC \
-        LIMIT 5;")
+        LIMIT 5;"
+    )
     query_5 = c.fetchall()
 
     c.execute(
@@ -127,7 +132,8 @@ def stats():
         JOIN players ON teams.team_id = players.team_id \
         GROUP BY teams.team_name \
         ORDER BY average_age DESC \
-        LIMIT 4;")
+        LIMIT 5;"
+    )
     query_6 = c.fetchall()
 
     c.execute(
@@ -136,7 +142,8 @@ def stats():
         JOIN players ON teams.team_id = players.team_id \
         GROUP BY teams.team_name \
         ORDER BY average_age ASC \
-        LIMIT 4;")
+        LIMIT 4;"
+    )
     query_7 = c.fetchall()
 
     c.execute(
@@ -145,7 +152,8 @@ def stats():
         JOIN players ON teams.team_id = players.team_id \
         GROUP BY teams.team_name \
         ORDER BY height DESC \
-        LIMIT 4;")
+        LIMIT 4;"
+    )
     query_8 = c.fetchall()
 
     c.execute(
@@ -154,13 +162,15 @@ def stats():
                 JOIN players ON teams.team_id = players.team_id \
                 GROUP BY teams.team_name \
                 ORDER BY height ASC \
-                LIMIT 4;")
+                LIMIT 8;"
+    )
     query_9 = c.fetchall()
 
     c.execute(
         "SELECT stadiums.stadium_name, stadiums.capacity \
         FROM stadiums \
-        ORDER BY capacity DESC;")
+        ORDER BY capacity DESC;"
+    )
     query_10 = c.fetchall()
 
     c.execute(
@@ -173,7 +183,8 @@ def stats():
         WHERE events.type = 'G' \
         GROUP BY players.player_id \
         ORDER BY fastest_goal \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     query_11 = c.fetchall()
 
     c.execute(
@@ -187,7 +198,8 @@ def stats():
         WHERE events.type = 'Y' \
         GROUP BY teams.team_name \
         ORDER BY earliest_yellow_card \
-        LIMIT 5;")
+        LIMIT 5;"
+    )
     query_12 = c.fetchall()
 
     c.execute(
@@ -195,7 +207,8 @@ def stats():
         FROM players \
         JOIN teams ON teams.team_id = players.team_id \
         ORDER BY Date_of_birth DESC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     query_13 = c.fetchall()
 
     c.execute(
@@ -203,7 +216,8 @@ def stats():
         FROM players \
         JOIN teams ON teams.team_id = players.team_id \
         ORDER BY Date_of_birth ASC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     query_14 = c.fetchall()
 
     c.execute(
@@ -211,7 +225,8 @@ def stats():
         FROM players \
         JOIN teams ON teams.team_id = players.team_id \
         ORDER BY height DESC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     query_15 = c.fetchall()
 
     c.execute(
@@ -219,15 +234,31 @@ def stats():
         FROM players \
         JOIN teams ON teams.team_id = players.team_id \
         ORDER BY height ASC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     query_16 = c.fetchall()
 
     c.close()
     conn.close()
-    return render_template("stats.html", query_1=query_1, query_2=query_2, query_3=query_3, query_4=query_4,
-                           query_5=query_5, query_6=query_6, query_7=query_7, query_8=query_8, query_9=query_9,
-                           query_10=query_10, query_11=query_11, query_12=query_12, query_13=query_13, query_14=query_14,
-                           query_15=query_15, query_16=query_16)
+    return render_template(
+        "stats.html",
+        query_1=query_1,
+        query_2=query_2,
+        query_3=query_3,
+        query_4=query_4,
+        query_5=query_5,
+        query_6=query_6,
+        query_7=query_7,
+        query_8=query_8,
+        query_9=query_9,
+        query_10=query_10,
+        query_11=query_11,
+        query_12=query_12,
+        query_13=query_13,
+        query_14=query_14,
+        query_15=query_15,
+        query_16=query_16,
+    )
 
 
 @auth.route("/matches")
@@ -242,7 +273,8 @@ def matches():
         JOIN teams ON matches.home_team_id=teams.team_id \
         JOIN teams a ON matches.away_team_id=a.team_id \
         JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
-        WHERE teams.group_letter='E'")
+        WHERE teams.group_letter='E'"
+    )
     matches_query_1 = c.fetchall()
 
     c.execute(
@@ -251,7 +283,8 @@ def matches():
         JOIN teams ON matches.home_team_id=teams.team_id \
         JOIN teams a ON matches.away_team_id=a.team_id \
         JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
-        WHERE teams.group_letter='C'")
+        WHERE teams.group_letter='C'"
+    )
     matches_query_2 = c.fetchall()
 
     c.execute(
@@ -260,7 +293,8 @@ def matches():
         JOIN teams a ON a.team_id = matches.home_team_id \
         JOIN teams b ON b.team_id = matches.away_team_id \
         ORDER BY total_goals DESC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     matches_query_3 = c.fetchall()
 
     c.execute(
@@ -272,7 +306,8 @@ def matches():
         WHERE events.type IN ('Y', 'R') \
         GROUP BY matches.match_id \
         ORDER BY cards DESC \
-        LIMIT 10;")
+        LIMIT 10;"
+    )
     matches_query_4 = c.fetchall()
 
     c.execute(
@@ -281,7 +316,8 @@ def matches():
         JOIN teams ON matches.home_team_id=teams.team_id \
         JOIN teams a ON matches.away_team_id=a.team_id \
         JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
-        WHERE stadiums.stadium_name = 'Lusail Stadium';")
+        WHERE stadiums.stadium_name = 'Lusail Stadium';"
+    )
     matches_query_5 = c.fetchall()
 
     c.execute(
@@ -290,14 +326,21 @@ def matches():
         JOIN teams ON matches.home_team_id=teams.team_id \
         JOIN teams a ON matches.away_team_id=a.team_id \
         JOIN stadiums ON stadiums.stadium_id = matches.stadium_id \
-        WHERE stadiums.stadium_name = 'Al Bayt Stadium';")
+        WHERE stadiums.stadium_name = 'Al Bayt Stadium';"
+    )
     matches_query_6 = c.fetchall()
 
     c.close()
     conn.close()
-    return render_template("matches.html", matches_query_1=matches_query_1, matches_query_2=matches_query_2, matches_query_3=matches_query_3, matches_query_4=matches_query_4,
-                           matches_query_5=matches_query_5, matches_query_6=matches_query_6)
-
+    return render_template(
+        "matches.html",
+        matches_query_1=matches_query_1,
+        matches_query_2=matches_query_2,
+        matches_query_3=matches_query_3,
+        matches_query_4=matches_query_4,
+        matches_query_5=matches_query_5,
+        matches_query_6=matches_query_6,
+    )
 
 
 @auth.route("/stadiums")

@@ -2,21 +2,28 @@
 {% block title %}Matches{% endblock %}
 {% block content %}
 
-    <div class="container mb-5">
+<div class="container mb-5">
     <h1 class="my-4">Stats</h1>
     <hr>
+    <div class="form-group">
+        <label for="group_select">Select Group:</label>
+        <select class="form-control" style="width: 200px;" id="group_select" name="group_select">
+            <option value="E">Group E</option>
+            <option value="C">Group C</option>
+        </select>
+    </div>
 
-    <div class="card">
+    <div id="group_E" class="card my-4">
         <h3 class="my-4 text-center">Schedule and results of matches for Group E</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Stadium name</th>
-                    <th>Home team</th>
-                    <th>Away team</th>
-                    <th>Score</th>
+                    <th style="width: 200px;">Time</th>
+                    <th style="width: 250px;">Stadium name</th>
+                    <th style="width: 200px;">Home team</th>
+                    <th style="width: 200px;">Away team</th>
+                    <th style="width: 200px;">Score</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,17 +41,17 @@
         </table>
     </div>
 
-    <div class="card">
+    <div id="group_C" class="card my-4" style="display:none;">
         <h3 class="my-4 text-center">Schedule and results of matches for Group C</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Stadium name</th>
-                    <th>Home team</th>
-                    <th>Away team</th>
-                    <th>Score</th>
+                    <th style="width: 200px;">Time</th>
+                    <th style="width: 250px;">Stadium name</th>
+                    <th style="width: 200px;">Home team</th>
+                    <th style="width: 200px;">Away team</th>
+                    <th style="width: 200px;">Score</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,59 +69,24 @@
         </table>
     </div>
 
-
-    <div class="card">
-        <h3 class="my-4 text-center">Top 10 matches with the highest scores</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Match</th>
-                    <th>Total goals</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for query in matches_query_3 %}
-                <tr>
-                    <td>{{ query[0] }}</td>
-                    <td>{{ query[1] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="form-group mb-3">
+        <label for="stadium_select">Select Stadium:</label>
+        <select class="form-control" id="stadium_select" style="width: 200px;" name="stadium_select">
+            <option value="Lusail">Lusail Stadium</option>
+            <option value="Al Bayt">Al Bayt Stadium</option>
+        </select>
     </div>
-
-
-    <div class="card">
-        <h3 class="my-4 text-center">Top 10 matches with most yellow/red cards</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Match</th>
-                    <th>Number of cards</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for query in matches_query_4 %}
-                <tr>
-                    <td>{{ query[0] }}</td>
-                    <td>{{ query[1] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
-    <div class="card">
+    <div id="Lusail" class="card">
         <h3 class="my-4 text-center">All matches which took place at Lusail Stadium stadium</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Stadium name</th>
-                    <th>Home team</th>
-                    <th>Away team</th>
-                    <th>Score</th>
+                    <th style="width: 200px;">Time</th>
+                    <th style="width: 250px;">Stadium name</th>
+                    <th style="width: 200px;">Home team</th>
+                    <th style="width: 200px;">Away team</th>
+                    <th style="width: 200px;">Score</th>
                 </tr>
             </thead>
             <tbody>
@@ -131,22 +103,21 @@
             </tbody>
         </table>
     </div>
-
-    <div class="card">
+    <div id="Al Bayt" class="card" style="display:none;">
         <h3 class="my-4 text-center">All matches which took place at Al Bayt Stadium stadium</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Stadium name</th>
-                    <th>Home team</th>
-                    <th>Away team</th>
-                    <th>Score</th>
+                    <th style="width: 200px;">Time</th>
+                    <th style="width: 250px;">Stadium name</th>
+                    <th style="width: 200px;">Home team</th>
+                    <th style="width: 200px;">Away team</th>
+                    <th style="width: 200px;">Score</th>
                 </tr>
             </thead>
             <tbody>
-                {% for query in matches_query_5 %}
+                {% for query in matches_query_6 %}
                 <tr>
                     <td>{{ query[0] }}</td>
                     <td>{{ query[1] }}</td>
@@ -159,6 +130,75 @@
             </tbody>
         </table>
     </div>
+
+    <div class="row my-4">
+        <div class="col-6 px-2">
+            <div class="card">
+                <h3 class="my-4 text-center">Top 10 matches with the highest scores</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th style="width: 250px;">Total goals</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for query in matches_query_3 %}
+                        <tr>
+                            <td>{{ query[0] }}</td>
+                            <td>{{ query[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6 px-2">
+            <div class="card">
+                <h3 class="my-4 text-center">Top 10 matches with most yellow/red cards</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th style="width: 250px;">Number of cards</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for query in matches_query_4 %}
+                        <tr>
+                            <td>{{ query[0] }}</td>
+                            <td>{{ query[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
-{% endblock %}
+
+
+
+    <script>
+        document.getElementById("group_select").onchange = function () {
+            if (this.value == "E") {
+                document.getElementById("group_E").style.display = "block";
+                document.getElementById("group_C").style.display = "none";
+            } else {
+                document.getElementById("group_E").style.display = "none";
+                document.getElementById("group_C").style.display = "block";
+            }
+        }
+
+        document.getElementById("stadium_select").onchange = function () {
+            if (this.value == "Lusail") {
+                document.getElementById("Lusail").style.display = "block";
+                document.getElementById("Al Bayt").style.display = "none";
+            } else {
+                document.getElementById("Lusail").style.display = "none";
+                document.getElementById("Al Bayt").style.display = "block";
+            }
+        }
+    </script>
+
+    {% endblock %}
